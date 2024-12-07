@@ -1,3 +1,30 @@
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Python cache files
 __pycache__/
+*.py[cod]
+
+# macOS specific files
 .DS_Store
+
+# IDE-specific files
+.virtual_documents/
+
+# Environment-specific
+.env
+.venv
+*.env
+*.venv
+
+# Jupyter Notebook outputs
+*.log
+*.out
+*.err
+
+# Ignore pickle files (optional, if used for saving models)
+*.pkl
+
+# Ignore virtual environment directories (common naming conventions)
+venv/
+env/
