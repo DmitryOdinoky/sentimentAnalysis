@@ -11,6 +11,13 @@ The main objectives of this project are:
 3. **Evaluation Metrics**: Maximize the recall for the 'positive' class, ensuring that precision is not less than 85%. Additionally, report the specificity for the 'non-positive' class.
 4. **Documentation**: Provide a detailed explanation of the approach, including data preprocessing, model selection, hyperparameter tuning, and evaluation.
 
+Trained model final test metrics:
+
+accuracy: 0.9505
+precision: 0.9839
+recall: 0.8478
+f1: 0.9108
+
 ## Setup
 
 To get started with this project, follow these steps:
