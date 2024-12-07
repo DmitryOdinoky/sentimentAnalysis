@@ -51,9 +51,9 @@ The project follows these steps:
 
 1. **Data Preprocessing**: The text data from the Llama-2 Finance Dataset is cleaned and preprocessed, including tokenization, padding, and conversion to PyTorch tensors.
 
-2. **Model Development**: The binary classifier is implemented using a simple PyTorch module. The model consists of a linear layer, a ReLU activation, and a final linear layer that outputs logits for the two classes (positive and non-positive).
+2. **Model Development**: The binary classifier is implemented using a simple PyTorch module. The model consists of a linear layer, a ReLU activation, and a final linear layer that outputs logits for the two classes (positive and non-positive). Binary cross-entropy is used as loss function to match initial task.
 
-3. **Training and Evaluation**: The model is trained using the PyTorch Lightning framework. The training objective is to minimize the cross-entropy loss between the model's predictions and the ground-truth labels. The model is trained for a fixed number of epochs, with the learning rate reduced on plateau of the validation accuracy metric.
+3. **Training and Evaluation**: The model is trained using the PyTorch Lightning framework. The training objective is to minimize the binary cross-entropy loss between the model's predictions and the ground-truth labels. The model is trained for a fixed number of epochs, with the learning rate reduced on plateau of the validation accuracy metric.
 
 The training parameters are set as follows:
 - Batch size: 32
