@@ -23,7 +23,7 @@ __pycache__/
 *.err
 
 # Ignore pickle files (optional, if used for saving models)
-*.pkl
+
 
 # Ignore virtual environment directories (common naming conventions)
 venv/
