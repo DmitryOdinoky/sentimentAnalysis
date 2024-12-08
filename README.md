@@ -14,9 +14,9 @@ The main objectives of this project are:
 Trained model final test metrics:
 
 accuracy: 0.9464
-precision: 0.9798
-recall: 0.8374
-f1: 0.9030
+precision: 0.9721
+recall: 0.8443
+f1: 0.9037
 
 ## Setup
 
