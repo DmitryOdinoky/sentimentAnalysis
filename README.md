@@ -37,7 +37,7 @@ To get started with this project, follow these steps:
 
 `jupyter notebook sentimentAnalysis.ipynb`
 
-This will execute the sentiment analysis pipeline, including data preparation, model training, and evaluation.
+This will execute the sentiment analysis pipeline, including data preparation, model training, and evaluation. Note, that notebook is built to work with 'mps' GPU specifically. If you don't have it, you can change it to 'cuda' or 'cpu' in the notebook or proceed to the inference part, because resulting trained model and vectorizer are added to the repository.
 
 To run simple API endpoint navidate to repository and call
 
@@ -55,6 +55,8 @@ The project directory contains the following files:
 - `README.md`: This file, which provides an overview and instructions for the project.
 - `app.py`: FastApi backend application with single endpoint for model inference.
 - `test_endpoint.py`: API testing script with hard-coded test cases.
+- `data/`: Contains full and shortened verion of the dataset.
+- `model/`: Contains trained model and vectorizer.
 
 ## Methodology
 
