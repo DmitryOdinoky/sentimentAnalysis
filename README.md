@@ -74,7 +74,7 @@ The training parameters are set as follows:
 - Optimizer: AdamW
 - Learning rate scheduler: ReduceLROnPlateau
 
-This configuration was chosen based on common practices for text classification tasks and some initial experimentation to achieve good performance on the validation set. Model was trained locally, on MacBook Air M1 laptop. So, main focus was on keeping model as simple and light-weight as possible, but meet given consteaints: 
+This configuration was chosen based on common practices for text classification tasks and some initial experimentation to achieve good performance on the validation set. Model was trained locally, on MacBook Air M1 laptop. So, main focus was on keeping model as simple and light-weight as possible, but meet given constraints: 
 
 - Maximize recall for the ‘positive’ class, ensuring that precision is not less than 85%
 - Use pure PyTorch for model implementation. However, in order to achieve fast processing [TfidfVectorizer](https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) from scikit-learn was used for feature extraction
