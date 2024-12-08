@@ -10,6 +10,8 @@ The main objectives of this project are:
 2. **Binary Classifier**: Implement a binary classifier using PyTorch to classify text as either positive or non-positive (neutral/negative).
 3. **Evaluation Metrics**: Maximize the recall for the 'positive' class, ensuring that precision is not less than 85%. Additionally, report the specificity for the 'non-positive' class.
 4. **Documentation**: Provide a detailed explanation of the approach, including data preprocessing, model selection, hyperparameter tuning, and evaluation.
+5. **Model Deployment:**: Expose the trained model via an API endpoint. Provide instructions on how to run the API locally, including sample test cases for calling the
+model endpoint.
 
 Trained model final test metrics:
 
@@ -24,18 +26,25 @@ To get started with this project, follow these steps:
 
 1. **Clone the repository**:
 
-git clone https://github.com/your-username/sentiment-analysis-finance.git
+`git clone https://github.com/your-username/sentiment-analysis-finance.git`
 
 2. **Install dependencies**:
 
-cd sentiment-analysis-finance
-pip install -r requirements.txt
+`cd sentiment-analysis-finance`
+`pip install -r requirements.txt`
 
 3. **Run the notebook**:
 
-jupyter notebook sentimentAnalysis.ipynb
+`jupyter notebook sentimentAnalysis.ipynb`
 
 This will execute the sentiment analysis pipeline, including data preparation, model training, and evaluation.
+
+To run simple API endpoint navidate to repository and call
+
+`uvicorn app:app --reload`
+
+call `python test_endpoint.py` to test enpoint locally. Test cases are hard-coded into test_cases for simplicity.
+
 
 ## Project Structure
 
@@ -44,6 +53,8 @@ The project directory contains the following files:
 - `sentimentAnalysis.ipynb`: The Jupyter Notebook that runs the sentiment analysis pipeline.
 - `requirements.txt`: The list of dependencies required for the project.
 - `README.md`: This file, which provides an overview and instructions for the project.
+- `app.py`: FastApi backend application with single endpoint for model inference.
+- `test_endpoint.py`: API testing script with hard-coded test cases.
 
 ## Methodology
 
@@ -61,7 +72,11 @@ The training parameters are set as follows:
 - Optimizer: AdamW
 - Learning rate scheduler: ReduceLROnPlateau
 
-This configuration was chosen based on common practices for text classification tasks and some initial experimentation to achieve good performance on the validation set.
+This configuration was chosen based on common practices for text classification tasks and some initial experimentation to achieve good performance on the validation set. Model was trained locally, on MacBook Air M1 laptop. So, main focus was on keeping model as simple and light-weight as possible, but meet given consteaints: 
+
+- Maximize recall for the ‘positive’ class, ensuring that precision is not less than 85%
+- Use pure PyTorch for model implementation. However, in order to achieve fast processing [TfidfVectorizer](https://scikit-learn.org/1.5/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) from scikit-learn was used for feature extraction
+
 
 4. **Documentation**: The `sentimentAnalysis.ipynb` notebook provides detailed comments and explanations for each step of the process, including data preprocessing, model architecture, training, and evaluation.
 
