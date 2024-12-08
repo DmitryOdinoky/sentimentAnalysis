@@ -37,7 +37,7 @@ To get started with this project, follow these steps:
 
 `jupyter notebook sentimentAnalysis.ipynb`
 
-This will execute the sentiment analysis pipeline, including data preparation, model training, and evaluation. Note, that notebook is built to work with 'mps' GPU specifically. If you don't have it, you can change it to 'cuda' or 'cpu' in the notebook or proceed to the inference part, because resulting trained model and vectorizer are added to the repository.
+This will execute the sentiment analysis pipeline, including data preparation, model training, and evaluation. Note, that notebook is built to work with 'mps' GPU specifically. If you don't have it, you can change it to 'cuda' or 'cpu' in the notebook or proceed to the inference part, because resulting trained model and vectorizer are added to the repository. Model and vectorizer are also compressed into `model.zip` file, so you can unzip it and use it directly.
 
 To run simple API endpoint navidate to repository and call
 
