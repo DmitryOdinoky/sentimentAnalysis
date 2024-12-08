@@ -15,10 +15,10 @@ model endpoint.
 
 Trained model final test metrics:
 
-accuracy: 0.9464
-precision: 0.9721
-recall: 0.8443
-f1: 0.9037
+- Accuracy: 0.9464
+- Precision: 0.9721
+- Recall: 0.8443
+- F1: 0.9037
 
 ## Setup
 
